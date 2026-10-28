@@ -315,7 +315,7 @@
 
   <section class="panel" id="panel-excl" role="tabpanel" aria-labelledby="tab-excl" hidden>
     <h2>Книги, которых нет в других магазинах</h2>
-    <p class="sec" id="excl-sec">Эти книги в нашем каталоге встречаются только у Букинистки.</p>
+    <p class="sec" id="excl-sec">Эти книги можно найти только у Букинистки.</p>
     <div class="grid" id="grid-excl"></div>
   </section>
 
@@ -398,9 +398,6 @@
     document.getElementById("stat-exclusive").textContent = String(stats.exclusive);
     document.getElementById("tab-lowest").textContent = "Лучшая цена (" + stats.lowest + ")";
     document.getElementById("tab-excl").textContent = "Только у Букинистки (" + stats.exclusive + ")";
-    document.getElementById("excl-sec").textContent =
-      "Эти " + stats.exclusive + " ISBN в нашем каталоге встречаются только у Букинистки.";
-
     const gridL = document.getElementById("grid-lowest");
     const gridE = document.getElementById("grid-excl");
     lowest.forEach((b) => gridL.appendChild(card(b, "lowest")));
